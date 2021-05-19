@@ -1,0 +1,23 @@
+{
+    "name": "iayoo/think-oracle",
+    "description": "thinkphp 6.0 的oracle扩展",
+    "keywords": ["oracle", "oci", "pdo", "pdo_oci", "thinkphp", "thihnkphp5", "thinkphp6", "topthink", "think-oracle"],
+    "type": "library",
+    "license": "MIT",
+    "minimum-stability": "dev",
+    "authors": [
+        {
+            "name": "iayoo",
+            "email": "vilnius94@163.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.1.0",
+        "topthink/think-orm": "~2.0.34"
+    },
+    "autoload": {
+        "psr-4": {
+            "iayoo\\think\\" : "src"
+        }
+    }
+}
