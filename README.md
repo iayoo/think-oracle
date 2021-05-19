@@ -3,6 +3,8 @@
 基于官方库 `think-oracle` 上做了一些兼容修改。
 使用了 `oracle-19c` 的数据库版本进行测试，其它版本尚未测试。
 
+如果有问题可以提 `issue` .
+
 ## 依赖
 
 - thinkphp 6.0
@@ -80,3 +82,11 @@ CHARSET = utf8
 DEBUG = false
 SEQ_PRE= 自增序列前缀
 ```
+
+## 修改说明
+
+- `Builer` 库重写，对查询字段新增双引号`"`，适应小写的字段和表问题
+- `自增主键` 问题使用原生查询兼容，配合 `触发器` 和 `序列` 实现 `自增ID`
+- `insertAll` 方法的重写，由于官方扩展中没有实现 `insertAll` ，所以自行实现了一次
+- `count` 方法的适配，由于原有的 `count` 不适配 `Oracle` 的语法，因此该方法重新实现了一次
+- 语法解析方法基本都适配了 `Oracle-19c` 的语法，其中包含 `insert`,`parseData`,`parseDuplicate`,`insertAll`,`parseField`,`parseKey` 
