@@ -4,6 +4,7 @@
     "keywords": ["oracle", "oci", "pdo", "pdo_oci", "thinkphp", "thihnkphp5", "thinkphp6", "topthink", "think-oracle"],
     "type": "library",
     "license": "MIT",
+    "minimum-stability": "stable",
     "authors": [
         {
             "name": "iayoo",
